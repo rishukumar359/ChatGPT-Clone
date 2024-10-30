@@ -9,7 +9,7 @@ CORS(app)
 @app.route("/gpt_response", methods=["POST", "GET"])
 def home():
     # OpenAI API Key
-    openai.api_key = "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"
+    openai.api_key = "your"
 
     # Check if it's a POST request and get the request body
     if request.method == "POST":
