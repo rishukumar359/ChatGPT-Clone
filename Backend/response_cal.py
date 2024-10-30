@@ -11,7 +11,7 @@ import ast
 # Initialize Flask app and enable CORS
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
-API_KEY = 'AIzaSyAS2zdHz91sTTdLtLdkjhU8q_Eh2GWcIR8'
+API_KEY = 'Your-Key'
 genai.configure(api_key=API_KEY)
 # model_gemini = genai.GenerativeModel('gemini-pro')
 model_gemini = genai.GenerativeModel('gemini-pro')
