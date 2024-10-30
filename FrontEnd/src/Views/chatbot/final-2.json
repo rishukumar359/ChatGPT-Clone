@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Are you married or in/were a civil partnership?",
+        "id": "testator.family.has_partner",
+        "conditions": [],
+        "sequence": 2,
+        "userResponse": "no",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person is married or have even been in civil partnership, otherwise respond with 'no'",
+        "calculatedResponse": "no"
+    },
+    {
+        "question": "Do you have children?",
+        "id": "testator.family.has_children",
+        "conditions": [],
+        "sequence": 3,
+        "userResponse": "yes",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person has children, otherwise respond with 'no'",
+        "calculatedResponse": "yes"
+    },
+    {
+        "question": "Do you own your own residential property?",
+        "id": "testator.property_residential",
+        "conditions": [],
+        "sequence": 4,
+        "userResponse": "no yes",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person has residential property, otherwise respond with 'no'",
+        "calculatedResponse": "no"
+    },
+    {
+        "question": "Do you own any property jointly with your spouse/partner?",
+        "id": "testator.property_joint",
+        "conditions": [],
+        "sequence": 5,
+        "userResponse": "i do",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person joinlty owned any property with spouse/partner, otherwise respond with 'no'",
+        "calculatedResponse": "yes"
+    }
+]

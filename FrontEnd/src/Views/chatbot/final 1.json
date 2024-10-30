@@ -1,0 +1,147 @@
+[
+    {
+        "question": "What do you want your Will to achieve?",
+        "id": "will-purpose",
+        "conditions": [],
+        "sequence": 1,
+        "userResponse": "yes",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Are you married or in/were a civil partnership?",
+        "id": "testator.family.has_partner",
+        "conditions": [],
+        "sequence": 2,
+        "userResponse": "no",
+        "prompt": "User has replied $userResponse to the question $question. Do respond with 'yes' if person is married or have even been in civil partnership, otherwise respond with 'no'",
+        "calculatedResponse": "I cannot answer this question based on the provided context. The information about whether the person is married or has been in a civil partnership is not available in the provided context."
+    },
+    {
+        "question": "Do you have children?",
+        "id": "testator.family.has_children",
+        "conditions": [],
+        "sequence": 3,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Do you own your own residential property?",
+        "id": "testator.property_residential",
+        "conditions": [],
+        "sequence": 4,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Do you own any property jointly with your spouse/partner?",
+        "id": "testator.property_joint",
+        "conditions": [
+            {
+                "id": "testator.family.has_partner",
+                "value": "yes"
+            }
+        ],
+        "sequence": 5,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Do you own any property jointly with another person?",
+        "id": "testator.property_joint",
+        "conditions": [],
+        "sequence": 6,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Do you own more than one property?",
+        "id": "testator.property_more_than_one",
+        "conditions": [],
+        "sequence": 7,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Do you own any foreign property?",
+        "id": "testator.property_foreign",
+        "conditions": [],
+        "sequence": 8,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Do you own any commercial property or have any business interests?",
+        "id": "testator.property_commercial_or_business_interests",
+        "conditions": [],
+        "sequence": 9,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "What is the rough value of your estate?",
+        "id": "testator.estate_value",
+        "conditions": [],
+        "sequence": 10,
+        "userResponse": "",
+        "prompt": "User has replied $userResponse to the question $question. Do suggest only one response out of these - Under 50k, 50k to 100k, 100k to 200k , 200k to 500k , Less then 500K",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Do you want to leave gift(s) from your estate?",
+        "id": "estate.gifts.leave",
+        "conditions": [],
+        "sequence": 11,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Who do you want leave your estate to?",
+        "id": "estate.gifts.type",
+        "conditions": [
+            {
+                "id": "estate.gifts.leave",
+                "value": "yes"
+            }
+        ],
+        "sequence": 12,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Who do you want to leave your property(ies) to?",
+        "id": "estate.properties.leave",
+        "conditions": [],
+        "sequence": 13,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    },
+    {
+        "question": "Are you planning to leave any property(ies) owned jointly in your Will?",
+        "id": "estate.properties.joint.leave",
+        "conditions": [
+            {
+                "id": "estate.properties.leave",
+                "value": "yes"
+            },
+            {
+                "id": "testator.property_joint",
+                "value": "yes"
+            }
+        ],
+        "sequence": 14,
+        "userResponse": "",
+        "prompt": "",
+        "calculatedResponse": ""
+    }
+]

@@ -1,0 +1,9 @@
+{
+    "id": "testator.family.has_partner",
+    "question": "Are you married or in/were a civil partnership?",
+    "userResponse": "yes",
+    "calculatedResponse": "",
+    "conditions": [],
+    "layerId": "5626",
+    "sessionId": "eyoj8psae"
+}

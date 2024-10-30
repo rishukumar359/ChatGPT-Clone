@@ -1,0 +1,47 @@
+@import "../../scss/variables";
+
+.sidebarContainer {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  background-color: $primary;
+  // display: flex;
+  // justify-content: center;
+  align-items: center;
+  
+}
+
+.sidebar-id {
+  margin-top: 2%;
+  // display: flex;
+  align-items: center;
+  gap: 10px; 
+  padding: 10px;
+  width: 60%;
+  background-color: #f0f0f0; 
+  border-radius: 5px; 
+
+  & > div {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+
+  .layer-id {
+    background-color: #e0f7fa; 
+    color: #00796b; 
+  }
+
+  .session-id {
+    background-color: #ffe0b2; 
+    color: #e65100; 
+  }
+  
+  .both-present {
+    margin-top: 5%;
+    // background-color: #dcedc8; 
+    // color: #388e3c; 
+  }
+}
+

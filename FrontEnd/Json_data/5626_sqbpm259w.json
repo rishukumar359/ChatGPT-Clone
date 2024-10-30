@@ -1,0 +1,88 @@
+[
+    {
+        "question": "Are you married or in/were a civil partnership?",
+        "id": "testator.family.has_partner",
+        "conditions": [],
+        "sequence": 2,
+        "userResponse": "no",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person is married or have even been in civil partnership, otherwise respond with 'no'",
+        "calculatedResponse": "no"
+    },
+    {
+        "question": "Do you have children?",
+        "id": "testator.family.has_children",
+        "conditions": [],
+        "sequence": 3,
+        "userResponse": "yes",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person has children, otherwise respond with 'no'",
+        "calculatedResponse": "yes"
+    },
+    {
+        "question": "Do you own your own residential property?",
+        "id": "testator.property_residential",
+        "conditions": [],
+        "sequence": 4,
+        "userResponse": "yes",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person has residential property, otherwise respond with 'no'",
+        "calculatedResponse": "yes"
+    },
+    {
+        "question": "Do you own any property jointly with your spouse/partner?",
+        "id": "testator.property_joint",
+        "conditions": [
+            {
+                "id": "testator.family.has_partner",
+                "value": "yes"
+            }
+        ],
+        "sequence": 5,
+        "userResponse": "yes",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person joinlty owned any property with spouse/partner, otherwise respond with 'no'",
+        "calculatedResponse": "yes"
+    },
+    {
+        "question": "Do you own any property jointly with another person?",
+        "id": "testator.property_joint",
+        "conditions": [],
+        "sequence": 6,
+        "userResponse": "Skipped",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person joinlty owned any property with other person, otherwise respond with 'no'",
+        "calculatedResponse": "no"
+    },
+    {
+        "question": "Do you own more than one property?",
+        "id": "testator.property_more_than_one",
+        "conditions": [],
+        "sequence": 7,
+        "userResponse": "Skipped",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person own property more than one, otherwise respond with 'no'",
+        "calculatedResponse": "yes"
+    },
+    {
+        "question": "Do you own any foreign property?",
+        "id": "testator.property_foreign",
+        "conditions": [],
+        "sequence": 8,
+        "userResponse": "Skipped",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person own property outside india, otherwise respond with 'no'",
+        "calculatedResponse": "no"
+    },
+    {
+        "question": "Do you own any commercial property or have any business interests?",
+        "id": "testator.property_commercial_or_business_interests",
+        "conditions": [],
+        "sequence": 9,
+        "userResponse": "Skipped",
+        "prompt": "User has replied {userResponse} to the question {question}. Do respond with 'yes' if person own commercial property or have any business interests, otherwise respond with 'no'",
+        "calculatedResponse": "yes"
+    },
+    {
+        "question": "What is the rough value of your estate?",
+        "id": "testator.estate_value",
+        "conditions": [],
+        "sequence": 10,
+        "userResponse": "Skipped",
+        "prompt": "User has replied $userResponse to the question $question. Do suggest only one response out of these - Under 50k, 50k to 100k, 100k to 200k , 200k to 500k , Less then 500K",
+        "calculatedResponse": "Under 50k"
+    }
+]
